@@ -1,9 +1,9 @@
 type ProductCardProps = {
   name: string;
   price: number;
-  category: string
+  category: string;
+  featured?: boolean
 };
-
 
 const ProfileCard = ({name, price, category}: ProductCardProps) => {
   return (
