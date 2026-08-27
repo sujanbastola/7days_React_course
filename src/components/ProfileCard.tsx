@@ -1,14 +1,17 @@
-const ProfileCard = () => {
-  const name = "sujan bastola";
-  const role = "React Learner";
-  const isLearning = true;
+type ProductCardProps = {
+  name: string;
+  price: number;
+  category: string
+};
 
+
+const ProfileCard = ({name, price, category}: ProductCardProps) => {
   return (
     <>
     <section>
       <h2>name: {name}</h2>
-      <p>{role}</p>
-      <p> now: {isLearning ? "Online" : "offline"}</p>
+      <p>price: {price}</p>
+      <p> Category: {category}</p>
     </section>
     </>
     );

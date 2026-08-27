@@ -1,16 +1,13 @@
 import Header from "./components/Header";
 import ProfileCard from "./components/ProfileCard";
 const App = () => {
-  const name = "sujan bastola";
-  const age = 27;
-  const role = " React Learner from absolute basic";
-  const isonline = true
   return(
     <>
     {/* this is header part */}
     <Header></Header>
     {/* this is profile card component */}
-    <ProfileCard></ProfileCard>
+    <ProfileCard name=" LAPTOP" price={2000} category="Electronics"></ProfileCard>
+    <ProfileCard name="MOBILE" price={13000} category="Electronics"></ProfileCard>
     </>
   );
 }
