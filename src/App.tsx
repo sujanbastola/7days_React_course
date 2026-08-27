@@ -1,3 +1,4 @@
+import Header from "./components/header";
 const App = () => {
   const name = "sujan bastola";
   const age = 27;
@@ -5,6 +6,7 @@ const App = () => {
   const isonline = true
   return(
     <>
+    <Header></Header>
     <main>
       <section>
         <h1>{name}</h1>
