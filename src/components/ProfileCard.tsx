@@ -5,12 +5,12 @@ type ProductCardProps = {
   featured?: boolean
 };
 
-const ProfileCard = ({name, price, category}: ProductCardProps) => {
+const ProfileCard = ({name, price, category, featured}: ProductCardProps) => {
   return (
     <>
     <section>
       <h2>name: {name}</h2>
-      <p>price: {price}</p>
+      <p>price: {price} {featured && "*"}</p>
       <p> Category: {category}</p>
     </section>
     </>
