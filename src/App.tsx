@@ -52,7 +52,7 @@ const App = () => {
     <>
     <div className="main-profile">
       {players.map((player) => (
-        <PlayerProfileCard key={player.id} name={player.name} nationality={player.nationality} wickets = {player.wickets}runs={player.runs} IPL_team={player.IPL_team} isLefty={player.isLefty} />
+        <PlayerProfileCard key={player.id} {...player}/>
       ))}
 
     </div>
