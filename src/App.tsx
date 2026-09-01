@@ -1,17 +1,16 @@
-import Header from "./components/Header";
-import ProfileCard from "./components/ProfileCard";
-import About from "./components/About";
+import PlayerProfileCard from "./components/PlayerProfileCard";
+import "./index.css"
+
 const App = () => {
   return(
     <>
-    {/* this is header part */}
-    <Header></Header>
-    {/* this is profile card component */}
-    <ProfileCard name=" LAPTOP" price={2000} category="Electronics"></ProfileCard>
-    <ProfileCard name="MOBILE" price={13000} featured = {true} category="Electronics"></ProfileCard>
-    <About location="Kathmandu" contact={9898989898} map="XAINA NI"></About>
-    <About location="Pokhara" contact={9841234567} map="Lake Side" featured={false} />
-    <About location="chitwan" contact={9841234567} map="Lake Side" featured={true} />
+    <div className="main-profile">
+    <PlayerProfileCard name="SUJAN BASTOLA" nationality="NEPALI" runs={2990} wickets={2} IPL_team="RCB" isLefty={false} />
+    <PlayerProfileCard name="SUBASH BASTOLA" nationality="NEPALI" runs={1500} wickets={24} IPL_team="RCB" isLefty={true} />
+    <PlayerProfileCard name="VIRAT KHOLI" nationality="INDIAN" runs={299} wickets={0} IPL_team="RCB" isLefty={false} />
+    <PlayerProfileCard name="CRISH GYLE" nationality="CARABIAN" runs={4590} wickets={40} IPL_team="RCB" isLefty={false} />
+    <PlayerProfileCard name="PANKAJ CHAND" nationality="NEPALI" runs={7676} wickets={20} IPL_team="RCB"  />
+    </div>
 
     </>
   );
