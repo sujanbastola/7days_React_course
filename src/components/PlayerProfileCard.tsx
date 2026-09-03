@@ -1,10 +1,6 @@
-import { PlayerProfile } from "./PlayerPforile";
+import type { Profile } from "./PlayerProfile";
 
-type PlayerProfileProps = {
-  player: PlayerProfile
-};
-
-const PlayerProfileCard = ({player}: PlayerProfileProps) => {
+const PlayerProfileCard = ({name, runs, wicket, nationality, iplTeam, isRighty }: Profile) => {
   return (
     <div className="profile-card">
       <div className="player-photo">
@@ -12,22 +8,22 @@ const PlayerProfileCard = ({player}: PlayerProfileProps) => {
       </div>
 
       <div className="player-information">
-        <h2>{player.name}</h2>
-        <p className="team">{player.IPL_team}</p>
+        <h2>{name}</h2>
+        <p className="team">{iplTeam}</p>
 
         <ul>
           <li>
-            <span>Runs:</span> {player.runs}
+            <span>Runs:</span> {runs}
           </li>
           <li>
-            <span>Wickets:</span> {player.wickets}
+            <span>Wickets:</span> {wicket}
           </li>
           <li>
             <span>Batting Style:</span>{" "}
-            {player.isLefty ? "Left Handed" : "Right Handed"}
+            { isRighty? "Right Handed" : "Left Handed"}
           </li>
           <li>
-            <span>Nationality:</span> {player.nationality}
+            <span>Nationality:</span> {nationality}
           </li>
         </ul>
       </div>
