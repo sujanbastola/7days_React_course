@@ -70,3 +70,24 @@ body {
     text-align: center;
   }
 }
+
+.favorite-status {
+  font-weight: bold;
+  color: #d71920;
+  margin: 8px 0;
+}
+
+.favorite-button {
+  margin-top: 12px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #d71920;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.favorite-button:hover {
+  background-color: #a81218;
+}

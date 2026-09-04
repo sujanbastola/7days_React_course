@@ -58,10 +58,24 @@ const initialPlayers: PlayerProfile[] = [
 const App = () => {
   const [players, setPlayers] = useState<PlayerProfile[]>(initialPlayers);
 
+  const toggleFavorite = (id: number) => {
+    setPlayers(
+      players.map((player) =>
+        player.id === id
+          ? { ...player, favorite: !player.favorite }
+          : player
+      )
+    );
+  };
+
   return (
     <div className="main-profile">
       {players.map((player) => (
-        <PlayerProfileCard key={player.id} {...player} />
+        <PlayerProfileCard
+          key={player.id}
+          {...player}
+          onToggleFavorite={toggleFavorite}
+        />
       ))}
     </div>
   );

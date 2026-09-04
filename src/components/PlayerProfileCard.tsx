@@ -1,6 +1,11 @@
 import type { PlayerProfile } from "./PlayerProfile";
 
+type PlayerProfileCardProps = PlayerProfile & {
+  onToggleFavorite: (id: number) => void;
+};
+
 const PlayerProfileCard = ({
+  id,
   name,
   runs,
   wickets,
@@ -8,7 +13,8 @@ const PlayerProfileCard = ({
   IPL_team,
   isLefty,
   favorite,
-}: PlayerProfile) => {
+  onToggleFavorite,
+}: PlayerProfileCardProps) => {
   return (
     <div className="profile-card">
       <div className="player-photo">
@@ -38,6 +44,13 @@ const PlayerProfileCard = ({
             <span>Nationality:</span> {nationality}
           </li>
         </ul>
+
+        <button
+          className="favorite-button"
+          onClick={() => onToggleFavorite(id)}
+        >
+          {favorite ? "Remove Favorite" : "Add Favorite"}
+        </button>
       </div>
     </div>
   );
