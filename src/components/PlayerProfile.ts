@@ -1,9 +1,10 @@
-export type Profile = {
+export type PlayerProfile = {
   id: number;
   name: string;
   runs: number;
-  wicket: number;
   nationality: string;
-  iplTeam: string;
-  isRighty?: boolean;
+  IPL_team: string;
+  wickets: number;
+  isLefty?: boolean;
+  favorite: boolean;
 };

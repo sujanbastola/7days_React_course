@@ -1,38 +1,63 @@
+import { useState } from "react";
 import PlayerProfileCard from "./components/PlayerProfileCard";
-import type { Profile } from "./components/PlayerProfile";
+import type { PlayerProfile } from "./components/PlayerProfile";
 import "./index.css";
 
-const players: Profile[] = [
+const initialPlayers: PlayerProfile[] = [
   {
     id: 1,
     name: "SUJAN BASTOLA",
     nationality: "NEPALI",
     runs: 2990,
-    wicket: 2,
-    iplTeam: "RCB",
-    isRighty: false,
+    wickets: 2,
+    IPL_team: "RCB",
+    isLefty: false,
+    favorite: false,
   },
   {
     id: 2,
     name: "HARI BASTOLA",
     nationality: "NEPALI",
     runs: 1500,
-    wicket: 24,
-    iplTeam: "RCB",
-    isRighty: true,
+    wickets: 24,
+    IPL_team: "RCB",
+    isLefty: true,
+    favorite: false,
   },
   {
     id: 3,
     name: "VIRAT KOHLI",
     nationality: "INDIAN",
     runs: 299,
-    wicket: 0,
-    iplTeam: "RCB",
-    isRighty: false,
+    wickets: 0,
+    IPL_team: "RCB",
+    isLefty: false,
+    favorite: false,
+  },
+  {
+    id: 4,
+    name: "CHRIS GAYLE",
+    nationality: "WEST INDIAN",
+    runs: 4590,
+    wickets: 40,
+    IPL_team: "RCB",
+    isLefty: true,
+    favorite: true,
+  },
+  {
+    id: 5,
+    name: "PANKAJ CHAND",
+    nationality: "NEPALI",
+    runs: 7676,
+    wickets: 20,
+    IPL_team: "RCB",
+    favorite: false,
   },
 ];
 
 const App = () => {
+  const [players, setPlayers] = useState<PlayerProfile[]>(initialPlayers);
+
   return (
     <div className="main-profile">
       {players.map((player) => (
