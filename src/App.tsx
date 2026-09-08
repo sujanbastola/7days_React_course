@@ -2,6 +2,10 @@ import { useState } from "react";
 import PlayerProfileCard from "./components/PlayerProfileCard";
 import type { PlayerProfile } from "./components/PlayerProfile";
 import "./index.css";
+import Counter from "./components/counter";
+import FavoritePractice from "./components/FavoritePractice";
+
+// use rafce shortcut key to generate  tsx templates
 
 const initialPlayers: PlayerProfile[] = [
   {
@@ -77,6 +81,9 @@ const App = () => {
           onToggleFavorite={toggleFavorite}
         />
       ))}
+
+      <Counter />
+      <FavoritePractice />
     </div>
   );
 };
