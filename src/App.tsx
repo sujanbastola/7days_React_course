@@ -4,6 +4,7 @@ import type { PlayerProfile } from "./components/PlayerProfile";
 import "./index.css";
 import FavoritePractice from "./components/FavoritePractice";
 import ButtonClick from "./components/ButtonClick";
+import NameInput from "./components/NameInput";
 
 // use rafce shortcut key to generate  tsx templates
 
@@ -84,6 +85,7 @@ const App = () => {
 
       <FavoritePractice />
       <ButtonClick />
+      <NameInput />
     </div>
   );
 };
