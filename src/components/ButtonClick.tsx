@@ -3,6 +3,12 @@ import { useState } from 'react'
 
 const ButtonClick = () => {
   const [count, setCount] = useState<number>(0);
+  const [isFavorite, setFavorite] = useState<boolean>(false);
+
+
+  const setfavorite = () => {
+    setFavorite(!isFavorite);
+  }
   const addCount = () => {
     setCount(count + 1);
   }
@@ -18,6 +24,9 @@ const ButtonClick = () => {
       <button onClick={addCount}> click me to increase</button>
       <button onClick={subCount}> click me to decrease</button>
       <button onClick={reset}>Reset me </button>
+
+      <h2>{isFavorite? "coupen is enable" :"coupen unavaiable"}</h2>
+      <button onClick={setfavorite}> {isFavorite ?"Remove coupen": "show coupen"}</button>
     </div>
   )
 }
