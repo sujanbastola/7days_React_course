@@ -2,8 +2,8 @@ import { useState } from "react";
 import PlayerProfileCard from "./components/PlayerProfileCard";
 import type { PlayerProfile } from "./components/PlayerProfile";
 import "./index.css";
-import Counter from "./components/counter";
 import FavoritePractice from "./components/FavoritePractice";
+import ButtonClick from "./components/ButtonClick";
 
 // use rafce shortcut key to generate  tsx templates
 
@@ -82,8 +82,8 @@ const App = () => {
         />
       ))}
 
-      <Counter />
       <FavoritePractice />
+      <ButtonClick />
     </div>
   );
 };
